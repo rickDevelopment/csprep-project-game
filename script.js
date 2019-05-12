@@ -1,14 +1,15 @@
 
 const submitButton = document.querySelector('.submit-button');
 const answer = document.querySelector('#answer');
-
+const codeBlock = document.querySelector('.code-block');
 
 submitButton.onclick= handleSubmit;
 
-
+//Function will run when the submit button is clicked
 function handleSubmit(){
  //convert user answer to  integer 
   userAnswer  = parseInt(answer.value)
+  console.log(typeof userAnswer)
   solution = gameArray[0].solution 
   if(userAnswer === solution){
     alert('Correct')
@@ -37,7 +38,7 @@ const gameArray = [
   }
   ]
 
-let codeBlock = document.querySelector('.code-block');
+
  codeBlock.textContent = gameArray[0]["code-block"]
 
  
