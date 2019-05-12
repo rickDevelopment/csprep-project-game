@@ -1,11 +1,21 @@
 
 const submitButton = document.querySelector('.submit-button');
+const answer = document.querySelector('#answer');
 
-console.log(submitButton)
+
 submitButton.onclick= handleSubmit;
 
+
 function handleSubmit(){
-  alert(`The Correct Answer is: ${gameArray[0].solution}`)
+ //convert user answer to  integer 
+  userAnswer  = parseInt(answer.value)
+  solution = gameArray[0].solution 
+  if(userAnswer === solution){
+    alert('Correct')
+  }else{
+    alert('Incorrect')
+  }
+  alert(`The Correct Answer is: ${gameArray[0].solution} answer submitted is ${answer.value}` )
 }
 
 const gameArray = [
