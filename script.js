@@ -1,6 +1,12 @@
 
+const submitButton = document.querySelector('.submit-button');
 
+console.log(submitButton)
+submitButton.onclick= handleSubmit;
 
+function handleSubmit(){
+  alert(`The Correct Answer is: ${gameArray[0].solution}`)
+}
 
 const gameArray = [
 
