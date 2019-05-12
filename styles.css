@@ -1,5 +1,12 @@
+
+.main-content{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
 .code-block{
   width: 20%;
+  background-color: aliceblue;
 }
 
 .submit-button{
