@@ -1,3 +1,10 @@
 .code-block{
   width: 20%;
 }
+
+.submit-button{
+  margin-top:50px;
+  width: 25%;
+  background-color: green;
+  font-size: 1.5em;
+}
