@@ -7,8 +7,11 @@
   margin-left: auto;
   margin-right: auto; 
 }
-.question-area{
-  width: 80%;
+.question{
+  width: 100%;
+}
+.code-area{
+  width: 100%;
   background-color: aliceblue;
 }
 
