@@ -159,7 +159,7 @@ const question = document.querySelector('.question')
 let questionIndex = 0
 let lastQuestionIndex = gameArray.length - 1
 let score = document.querySelector('.score')
-
+let count = 0;
 
 
 function calculateScore(){
@@ -181,7 +181,11 @@ function handleSubmitAnswer(){
     clearAnswerField();
     loadQuestions();
     
+  }else{
+    alert(`Your Score is: ${count} 
+    Thanks for playing`)
   }
+
 }
 
 function clearAnswerField(){
@@ -198,7 +202,7 @@ function loadQuestions(){
 
 
 function checkAnswer(){
-  let count = 0
+  
   score.textContent = count
  let userAnswer  = answer.value
   console.log(typeof userAnswer)
@@ -211,7 +215,7 @@ function checkAnswer(){
   }else{
     alert('Incorrect')
   }
-  alert(`The Correct Answer is: ${gameArray[questionIndex].answer} answer submitted is ${userAnswer}` ) 
+  //alert(`The Correct Answer is: ${gameArray[questionIndex].answer} answer submitted is ${userAnswer}` ) 
 }
 
 
