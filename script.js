@@ -15,26 +15,32 @@ const gameArray = [
     }    
     myFun2() }
     `,
-    answer:3
+    answer:'3'
   },
-  {'question': `this is some code 1`,
-  "code-block": "A block of code should go",
-    answer: false
+  {"question": `func ([1, 2, 3, 4], (a, b) => a + b, 0)`,
+"code-block": `function func(array, combine, start) {
+  let current = start;
+  for (let element of array) {
+    current = combine(current, element);
+  }
+  return current;
+};`,
+"answer": 10
 },
 
   {'question': `this is some code 2`,
   "code-block": "A block of code should go",
-    answer: 10
+    answer: '10'
 },
 
   {'question': `this is some code 3`,
   "code-block": "A block of code should go",
-    answer: 25
+    answer: '25'
 },
 
   {'question': `this is some code 4`,
   "code-block": "A block of code should go",
-    answer: true
+    answer: 'true'
 }
 
   ]
@@ -61,14 +67,17 @@ function handleSubmitAnswer(){
 
   if(questionIndex <= lastQuestionIndex){
     questionIndex++;
-    loadQuestions();
     clearAnswerField();
+    loadQuestions();
+    
   }
 }
 
 function clearAnswerField(){
   console.log(answer)
   answer.value =""
+  answer.focus();
+  
 }
 function loadQuestions(){
 
@@ -79,7 +88,7 @@ function loadQuestions(){
 
 
 function checkAnswer(){
- let userAnswer  = parseInt(answer.value)
+ let userAnswer  = answer.value
   console.log(typeof userAnswer)
  let quizAnswer = gameArray[questionIndex].answer 
 
